@@ -1,0 +1,30 @@
+server:
+  port: 8000
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          lowerCaseServiceId: true
+          enabled: true
+      routes:
+        - id: consumer-demo
+          uri: lb://consumer-demo
+          predicates:
+            - Path=/demo/**
+          filters:
+            - StripPrefix=1
+    sentinel:
+      filter:
+        enabled: false
+      transport:
+        dashboard: 127.0.0.1:8080
+        port: 8719
+      eager: true
