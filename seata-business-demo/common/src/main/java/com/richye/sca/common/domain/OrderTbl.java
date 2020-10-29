@@ -1,6 +1,8 @@
 package com.richye.sca.common.domain;
 
-public class OrderTbl {
+import java.io.Serializable;
+
+public class OrderTbl implements Serializable {
     private Integer id;
 
     private String userId;

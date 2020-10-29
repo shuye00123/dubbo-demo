@@ -17,6 +17,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void debit(String userId, int money) {
         int flag = accountTblMapper.debit(userId, money);
+        System.out.println(flag);
         if (flag != 1) throw new RuntimeException("余额不足");
     }
 }

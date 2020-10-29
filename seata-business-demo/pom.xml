@@ -32,6 +32,6 @@
                 <version>${mybatis-spring-boot.version}</version>
             </dependency>
         </dependencies>
-    </dependencyManagement>e
+    </dependencyManagement>
 
 </project>

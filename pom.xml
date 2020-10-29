@@ -14,9 +14,9 @@
     <packaging>pom</packaging>
 
     <properties>
-        <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
-        <alibaba-cloud.version>2.2.0.RELEASE</alibaba-cloud.version>
-        <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
+        <spring-boot.version>2.2.3.RELEASE</spring-boot.version>
+        <alibaba-cloud.version>2.2.3.RELEASE</alibaba-cloud.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
     </properties>
 
     <dependencyManagement>

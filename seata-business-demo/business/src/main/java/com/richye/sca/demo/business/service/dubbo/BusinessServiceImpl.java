@@ -3,6 +3,7 @@ package com.richye.sca.demo.business.service.dubbo;
 import com.richye.sca.common.api.BusinessService;
 import com.richye.sca.common.api.OrderService;
 import com.richye.sca.common.api.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.dubbo.config.annotation.Reference;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
@@ -19,6 +20,7 @@ public class BusinessServiceImpl implements BusinessService {
     @Reference
     private OrderService orderService;
     @Override
+    @GlobalTransactional
     public void purchase(String userId, String commodityCode, int orderCount) {
         storageService.deduct(commodityCode, orderCount);
 

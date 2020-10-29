@@ -176,6 +176,6 @@
     update account_tbl
     set
       money = money - #{param2}
-    where user_id = #{param1} and money > #{param2}
+    where user_id = #{param1} and money >= #{param2}
   </update>
 </mapper>
